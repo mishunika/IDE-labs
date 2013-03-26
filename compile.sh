@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ERRORS=false
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BIN=/usr/bin
 
@@ -7,8 +8,8 @@ declare -A tests
 declare -A builds
 declare -A running
 
-testing["C"]="$BIN/gcc -fsyntax-only $DIR/c/hello.c > $DIR/logs/gcc.log 2>&1"
-building["C"]="$BIN/gcc $DIR/c/hello.c -o $DIR/c/hello >> $DIR/logs/gcc.log 2>&1"
+tests["C"]="$BIN/gcc -fsyntax-only $DIR/c/hello.c > $DIR/logs/gcc.log 2>&1"
+builds["C"]="$BIN/gcc $DIR/c/hello.c -o $DIR/c/hello >> $DIR/logs/gcc.log 2>&1"
 running["C"]="$DIR/c/hello"
 
 tests["C++"]="$BIN/g++ -fsyntax-only $DIR/cpp/hello.cpp > $DIR/logs/cpp.log 2>&1"
@@ -44,11 +45,18 @@ function c_cpp_build()
         eval ${running[$i]}
       else
         printf "%s Program: No syntax errors were detected, but no compilation were done.\n" $i
+        ERRORS=true
       fi
     else
       printf "%s Program: Syntax error in the house!\n" $i
+      ERRORS=true
     fi
   done
+
+  if $ERRORS
+  then
+    $BIN/python2 sms.py +37369614191 "[IDE] Errors happened. Check the logs."
+  fi
 }
 
 c_cpp_build
