@@ -55,7 +55,7 @@ function c_cpp_build()
 
   if $ERRORS
   then
-    $BIN/python2 $DIR/sms.py +37369614191 "[IDE] Errors happened. Check the logs."
+    $BIN/python2 $DIR/sms.py +37369614191 "IDE. Errors happened. Check the logs."
   fi
 }
 
