@@ -2,8 +2,8 @@
 ###### student gr. FAF-111: Mihai Iachimovschi
 
 ## Part 1: Setting server environment. Version Control.
-### Objectives: 
-  - Understanding and using CLI (basic level) 
+### Objectives:
+  - Understanding and using CLI (basic level)
   - Administration of a remote linux machine using SSH
   - Ability to work with Version Control Systems (git || mercurial || svn)
   - Compile your C/C++/Java/Python programs through CLI using gcc/g++/javac/python compilers
@@ -36,7 +36,7 @@ cd /home/midps/deploy/lab\#1                      # This command will change the
 ```
 
 ### Basic GIT commands (The list was taken from Roman Roibu's repository and completed):
-- Initialize a GIT repository:    `git init`
+- Initialize a GIT repositoryenc:    `git init`
 - Viewing the repo status:        `git status`
 - View the staged files changes:  `git diff`
 - View the commit log:            `git log`
@@ -53,7 +53,27 @@ cd /home/midps/deploy/lab\#1                      # This command will change the
 - Reset to previous commit:       `git reset [mode] [commit]`
 
 ## Part 2: Command Line Interface (CLI). Scripting.
-### Objectives: 
+### Objectives:
   - Understanding and using CLI (basic level)
   - Ability to work remotely (remote code editing)
   - Creating a script that will compile multiple projects (source codes) with resulting multiple programs
+
+### Command line interface.
+Well, I'm very familiar with CLI.
+In my real life I use it every day, the most of the working time, so I can't tell to much about my learning experience at this laboratory work, but I'm very glad that such useful things are teached at the university.
+It is really very good to know, I'm telling that from my experience.
+
+### Scripting.
+My approach to the script was a little bit different from your requirements, but still, covers all of them indirectly.
+The main script was written in bash and it just checks syntax, compiles and executes the provided source code.
+It is executed by the post-receive hook from the production server.
+I've set up an array-like config and universalized the script, so now you can add just a new entry in the config array and the rest of the job will be done.
+If the main script encounters some errors, It sends an SMS to my phone number, with a sample warning.
+The errors from the compilation process are stored in special log files.
+
+##### SMS:
+The SMS is sent from the USB Dongle attached to the Raspberry Pi using [AT Commands](http://en.wikipedia.org/wiki/Hayes_command_set).
+The workflow is very simple. Simple things are the best.
+
+## Conclusion
+No conclusion for the moment
