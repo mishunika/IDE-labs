@@ -73,7 +73,11 @@ The errors from the compilation process are stored in special log files.
 
 ##### SMS:
 The SMS is sent from the USB Dongle attached to the Raspberry Pi using [AT Commands](http://en.wikipedia.org/wiki/Hayes_command_set).
-The workflow is very simple. Simple things are the best.
+The workflow is very simple. Simple things rules the world.
 
 ## Conclusion
-No conclusion for the moment
+Even if I was already familiar to the CLI, I am very glad that I had this opportunity to apply and improve my knowledge at the University.
+CLI is great, even now, I am writing this report in CLI using VIM editor.
+Working with git is a great experience. Git hooks are great! I will use them more and more frequently.
+Speaking about other Version Control Systems, I used SVN and at this laboratory work I had the opportunity to play with mercurial, also a very nice VCS.
+Overall it was very interesting. I am looking forward to the next laboratory works.
