@@ -20,4 +20,7 @@ Result
 
 Conclusions
 -----------
-
+This is my first mobile application written for iOS.
+I enjoyed very much the process of creation of a mobile application from scratch.
+From the trends of the time we all realize that mobile applications and mobile devices have a almost exponential growth, so it is extremely useful to know at leas the basis of mobile programming.
+Of course, any type of knowledge may be a starting point for really big projects.
