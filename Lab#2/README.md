@@ -18,7 +18,7 @@ GUI Programming
 
 Result
 ------
-![Main Window]()
+![Main Window](https://github.com/mishunika/IDE-labs/blob/master/Lab%232/screenshot.png)
 
 Conclusions
 -----------
